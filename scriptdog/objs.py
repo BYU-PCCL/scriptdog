@@ -28,7 +28,7 @@ class NamedStateOp(StateOp):
     '''
     transition to a new state
 
-    <say "pleased to meet you, {X}">
+    say( "pleased to meet you, {X}" )
 '''
 
     def __init__(self, name, arg_list, weight=1.0):
@@ -41,9 +41,9 @@ class SetOp(StateOp):
     '''
     set a global variable
 
-    <!set know_name>
-    <!set name {X}>
-    <!set {aux_props {X}}>  # XXX not yet supported
+    set!( know_name )
+    set!( name, {X} )
+    set!( {aux_props {X}} )>
 '''
 
     def __init__(self, arg_list, weight=1.0):
@@ -85,17 +85,17 @@ class ExpectOp(StateOp):
         return str(self.named_trans)
 
 
-class OptOp(StateOp):
+class ChoiceOp(StateOp):
     '''
-    implements the "option" directive
+    implements the "choice" directive
     randomly transitions to one sub-state, with probability proportional to the listed weights.
     the weight is optional, and defaults to 1.0
 
-    <opt> {
-      1.0 <say "one">
-      2.0 <say "two">
-      <say "three">
-    }
+    choice:
+      1.0 say( "one" )
+      2.0 say( "two" )
+      say( "three" )
+
 '''
 
     def __init__(self, op_set, weight=1.0):
