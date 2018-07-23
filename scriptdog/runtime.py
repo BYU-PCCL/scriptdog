@@ -4,7 +4,7 @@ import string
 import re
 import random  # only needed for opt
 
-from scriptdog.objs import (NamedStateOp, SetOp, ClearOp, ExpectOp, OptOp,
+from scriptdog.objs import (NamedStateOp, SetOp, ClearOp, ExpectOp, ChoiceOp,
                             IfOp, ReturnOp, RegexvOp, AssgnOp, IdrefOp,
                             VarrefOp, ElseOp)
 
@@ -87,7 +87,7 @@ def ExpectOp_exec(self, sd_prog, stack_obj, cur_ut):
         stack_obj['scope_stack'].append(ss[2])
 
 
-def OptOp_exec(self, sd_prog, stack_obj):
+def ChoiceOp_exec(self, sd_prog, stack_obj):
 
     # pick the new state
     weights = []
@@ -152,7 +152,7 @@ def bind_runtime():
     SetOp.exec = SetOp_exec
     ClearOp.exec = ClearOp_exec
     ExpectOp.exec = ExpectOp_exec
-    OptOp.exec = OptOp_exec
+    ChoiceOp.exec = ChoiceOp_exec
     IfOp.exec = IfOp_exec
     ReturnOp.exec = ReturnOp_exec
 
