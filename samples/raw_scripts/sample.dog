@@ -1,6 +1,5 @@
 #include "std_intents.dog"
 #include "std_types.dog"
-#include "std_routines.dog"
 
 # While #include is a directive, all other # are comments.
 
@@ -16,6 +15,8 @@ def start():
             say("If the flag came back as negative, this would be a possible response.")
             say("This might be the second response if the flag was negative.")
     expect:
+        [MAYBE_SAMPLE] -> yes_answer()
+        ["no way jose"] -> no_answer()
         [YES] -> yes_answer()
         [NO] -> no_answer()
     start()
@@ -31,3 +32,10 @@ def no_answer():
     get_flag(new_flag)
     get_value_based_on_flag(return_value, {new_flag})
     say("The function returned {return_value}.")
+
+# -----------------------------------------------------------
+
+def [MAYBE_SAMPLE]:
+    ["not (sure|positive)"]
+    ["maybe"]
+    ["could be"]
