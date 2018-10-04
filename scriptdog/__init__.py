@@ -39,7 +39,7 @@ def bind_op(function):
 #
 
 
-class Scriptdog:
+class ScriptDog:
     def __init__(self):
         self.contractions = {
             "can not": "cant",
