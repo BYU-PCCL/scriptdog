@@ -37,10 +37,12 @@ The recommended way to use ScriptDog can be seen in the samples folder. The raw 
 If you use ScriptDog in any research endeavors, please cite us!
 
 ```
-@misc{sciptdog2018,
+@misc{scriptdog2018,
   author = {David Wingate and Tyler Etchart},
   title = {ScriptDog},
   year = {2018},
-  url = {https://github.com/BYU-PCCL/scriptdog/},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/BYU-PCCL/scriptdog/}},
 }
 ```
