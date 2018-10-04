@@ -1,5 +1,5 @@
 import random
-from scriptdog import Scriptdog, state_op, bind_op
+from scriptdog import ScriptDog, state_op, bind_op
 
 # ============================================================
 # SAMPLE FILE
@@ -45,7 +45,7 @@ class SampleDog:
         # ====================================
 
         # create scriptdog obj
-        self.dog = Scriptdog()
+        self.dog = ScriptDog()
 
         # load the compiled (pkl) scriptdog script
         self.dog.load_program("compiled_scripts/sample.pkl")
