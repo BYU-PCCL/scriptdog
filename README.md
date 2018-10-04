@@ -32,3 +32,15 @@ The program will continually run until it hits an `expect` key word. The `expect
 
 ## program samples
 The recommended way to use ScriptDog can be seen in the samples folder. The raw scripts are the .dog files. The compiled scripts are the .pkl files. And the python file allows you to run your compiled scripts.
+
+## cite us
+If you use ScriptDog in any research endeavors, please cite us!
+
+```
+@misc{sciptdog2018,
+  author = {David Wingate and Tyler Etchart},
+  title = {ScriptDog},
+  year = {2018},
+  url = {https://github.com/BYU-PCCL/scriptdog/},
+}
+```
