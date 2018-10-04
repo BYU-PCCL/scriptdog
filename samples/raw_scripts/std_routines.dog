@@ -1,0 +1,24 @@
+
+#
+# ==============================================================================
+# ==============================================================================
+#
+# STANDARD ROUTINES
+#
+#   assumes std_types and std_intents are loaded previously
+#
+# ==============================================================================
+# ==============================================================================
+#
+
+# default personality definitions
+
+def initialize_default_personality():
+  set!( _easily_offended )
+
+#include "apologize.dog"
+#include "jokes.dog"
+#include "trolling.dog"
+#include "names.dog"
+
+# ==============================================================================

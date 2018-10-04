@@ -1,0 +1,37 @@
+#
+# Standard types of things we easily recognize.
+#
+
+def [NAME]:
+    [ GIRLS_NAME ]:
+        set!( _tmp_gender, "female" )
+    [ BOYS_NAME ]:
+        set!( _tmp_gender, "male" )
+
+def [GIRLS_NAME]:
+    ["alicia"]
+    ["catherine"]
+    ["katherine"]
+    ["iris"]    
+    ["nancy"]    
+
+def [BOYS_NAME]:
+    ["david"]
+    ["matt"]
+    ["tyler"]    
+
+def [NAMED_ENTITY]:
+    [ NAME ]                                                                    
+    [ COUNTRY ]                                                                 
+    [ MOVIE ]                                                                   
+    [ STATE ]                                                                   
+    [ HOLIDAY ]                                                                 
+    [ MONTH ]                                                                   
+    [ DAY_OF_WEEK ]                                                             
+
+def [COUNTRY]:
+    ["usa"]
+    
+# sports teams
+# world leaders
+# political entities (NATO)

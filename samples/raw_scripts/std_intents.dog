@@ -1,0 +1,81 @@
+
+#
+# These only match.  No additional processing is done.
+#
+
+# !!! note that this inhibits all global transitions.  it cannot be
+# !!! used as an element in a composite utterance, although you can
+# !!! say "[X=ANYTHING]"
+def [ANYTHING]:
+    [else]
+
+def [YES]:
+    ["(yes)|(yeah)|(you bet)|(absolutely)|(definitely)|(totally)|(very much)|(sure)|(no problem)|(yep)|(affirmative)|(certainly)|(ok)|(please)|(yes please)|(why not)|(i suppose)|(i suppose so)|(i guess)|(i guess so)"]
+
+def [NO]:
+    ["(no)|(nope)|(not a bit)|(not at all)|(no way)|(definitely not)|(not really)|(absolutely not)|(negative)|(are you kidding)|(no thanks)"]
+
+def [MAYBE]:
+    ["(maybe)|(perhaps)"]
+
+def [NEVERMIND]:
+    ["(i changed my mind)|(never mind)|(forget it)"]
+
+def [REALLY]:
+    [ "(really|truly|absolutely|without question|without a doubt)" ]
+
+#
+# -------------------------------------------------------------------------
+#
+
+def [POSITIVE_ADJ]:
+    [GOOD_ADJ]
+    [BETTER_ADJ]
+    [BEST_ADJ]
+
+def [NEGATIVE_ADJ]:
+    [BAD_ADJ]
+    [WORST_ADJ]
+
+def [BAD_ADJ]:
+    ["(bad|terrible|awful|poor|deficient|mediocre|below par)"]
+
+def [WORST_ADJ]:
+    ["(the worst|pessimal)"]
+
+def [GOOD_ADJ]:
+    ["(good|ok|okay|awesome|great|wonderful|terrific|outstanding|amazing|fantastic|supernal)"]
+
+def [BETTER_ADJ]:
+    ["(better)"]
+
+def [BEST_ADJ]:
+    ["(best|the best|the best ever|optimal)"]
+    [ MOST_ADJ GOOD_ADJ ]
+
+def [MOST_ADJ]:
+    [ "(most|super|supremely|very|really|truly|absolutely)" ]
+
+#
+# -------------------------------------------------------------------------
+#
+
+def [POSITIVE_V]:
+  [LOVE_V]
+  [LIKE_V]
+
+def [NEGATIVE_V]:
+  [HATE_V]
+  [DONTLIKE_V]    
+
+def [LOVE_V]:
+    [ "(love|admire|respect|support)" ]
+
+def [LIKE_V]:
+    [ "(like)" ]
+
+def [DONTLIKE_V]:
+    [ "(dislike|dont like)" ]
+
+def [HATE_V]:
+    [ "(hate|despise|cant stand)" ]
